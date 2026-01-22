@@ -7,6 +7,12 @@ import PartyDetailsForm from './components/PartyDetailsForm';
 import Wheel from './components/Wheel';
 import ResultView from './components/ResultView';
 
+// ==========================================
+// CONFIGURACIÓN WEBHOOK MAKE.COM
+// Pega aquí tu URL de Make (ej: https://hook.eu1.make.com/xxxxxx)
+// ==========================================
+const MAKE_WEBHOOK_URL = ""; 
+
 const LOADING_MESSAGES = [
   "Calculando ratio alcohol en sangre...",
   "Consultando antecedentes penales ...",
@@ -49,6 +55,27 @@ const App: React.FC = () => {
   const handleDetailsSubmit = (fullLead: Lead) => {
     setLead(fullLead);
     setStep('wheel');
+  };
+
+  const sendToWebhook = async (currentLead: Lead, currentPrize: Prize, currentDiagnosis: Diagnosis) => {
+    if (!MAKE_WEBHOOK_URL) return;
+    
+    try {
+      await fetch(MAKE_WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          timestamp: new Date().toISOString(),
+          lead: currentLead,
+          prize: currentPrize,
+          diagnosis: currentDiagnosis,
+          origin: "Rueda de la Fortuna Despedidas"
+        })
+      });
+      console.log("Datos enviados a Make correctamente.");
+    } catch (e) {
+      console.error("Error enviando al Webhook de Make:", e);
+    }
   };
 
   const generateDiagnosis = async (currentLead: Lead, currentPrize: Prize) => {
@@ -113,10 +140,12 @@ const App: React.FC = () => {
         const result = JSON.parse(response.text.trim());
         setDiagnosis(result);
         setStep('result');
+        // Enviamos a Make automáticamente tras el éxito
+        sendToWebhook(currentLead, currentPrize, result);
       }
     } catch (error) {
       console.error("Diagnosis Error:", error);
-      setDiagnosis({
+      const fallbackDiagnosis: Diagnosis = {
         global_score: 13,
         liver_score: 25,
         chaos_score: 95,
@@ -130,8 +159,11 @@ const App: React.FC = () => {
         },
         viral_quote: "Si no hay denuncia, no fue una despedida.",
         recommended_next_step: "Borrar las fotos antes de llegar a casa."
-      });
+      };
+      setDiagnosis(fallbackDiagnosis);
       setStep('result');
+      // Enviamos el fallback también para que no pierdas el lead
+      sendToWebhook(currentLead, currentPrize, fallbackDiagnosis);
     } finally {
       setLoading(false);
     }
