@@ -187,7 +187,7 @@ const App: React.FC = () => {
           <div className="w-full max-w-4xl text-center space-y-8 md:space-y-12 animate-fade-in">
             <div className="flex flex-col items-center gap-4">
               <div className="bg-rose-600 text-white px-5 py-1.5 rounded-full font-black text-[10px] md:text-xs uppercase tracking-[0.2em] shadow-xl">
-                AUDITORÍA DE DESMADRES S.L.
+                DESMADRES DESPEDIDAS S.L.
               </div>
               <h1 className="text-6xl md:text-[8rem] font-bungee leading-none tracking-tighter text-white drop-shadow-2xl">
                 RUEDA <br className="hidden md:block"/> <span className="text-yellow-400 italic">RETRANCA</span>
