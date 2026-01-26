@@ -9,9 +9,9 @@ import ResultView from './components/ResultView';
 
 // ==========================================
 // CONFIGURACIÓN WEBHOOK MAKE.COM
-// Pega aquí tu URL de Make (ej: https://hook.eu1.make.com/xxxxxx)
+// Pega aquí tu URL de Make (ej: https://hook.eu2.make.com/z2a8x764ws9sqammlqho7nslqb6lvqfe)
 // ==========================================
-const MAKE_WEBHOOK_URL = ""; 
+const MAKE_WEBHOOK_URL = "https://hook.eu2.make.com/z2a8x764ws9sqammlqho7nslqb6lvqfe"; 
 
 const LOADING_MESSAGES = [
   "Calculando ratio alcohol en sangre...",
@@ -98,11 +98,11 @@ const App: React.FC = () => {
         - RETO GANADO: "${currentPrize.name}"
 
         INSTRUCCIONES:
-        1. Resumen (summary): Critica ácidamente el plan. Menciona obligatoriamente al pringado "${currentLead.mvp_drunk}" y el peligro de llamar al ex. Vincula el reto "${currentPrize.name}" como la guinda del pastel de este desastre.
+        1. Resumen (summary): Critica ácidamente el plan. Menciona obligatoriamente al pringado "${currentLead.mvp_drunk}" y el peligro acabar liandola parda. Vincula el reto "${currentPrize.name}" como la guinda del pastel de este desastre.
         2. Scores (0-100): liver_score, chaos_score, shame_score.
-        3. DAFO: 3 por categoría con nombres graciosos y algo de explicacion con retranca gallega(Superpoderes, Fugas de Dignidad, Zonas de Peligro, Enemigos).
+        3. DAFO: 3 por categoría con nombres graciosos y algo de explicacion con retranca gallega (Superpoderes, Fugas de Dignidad, Zonas de Peligro, Enemigos).
         4. Viral Quote: Frase lapidaria para WhatsApp.
-        5. Next Step: 2 Consejos irónicos.
+        5. Next Step: 3 Consejos irónicos.
 
         Responde en JSON puro. Sé salvajemente divertido.
       `;
@@ -225,7 +225,7 @@ const App: React.FC = () => {
                 RUEDA <br className="hidden md:block"/> <span className="text-yellow-400 italic">RETRANCA</span>
               </h1>
               <p className="text-lg md:text-2xl text-slate-300 font-medium max-w-2xl mx-auto italic px-4">
-                ¿Acabaréis en el calabozo o con una resaca brutal? Gira para auditar vuestro destino.
+                ¿Acabaréis en el calabozo o con una resaca de caballo?  Gira para auditar vuestra despedida.
               </p>
             </div>
             
@@ -290,7 +290,7 @@ const App: React.FC = () => {
 
       <footer className="absolute bottom-4 w-full text-center px-4 pointer-events-none opacity-20">
         <div className="text-white text-[10px] font-black tracking-[0.4em] uppercase">
-          PROPIEDAD DE AGENCIA DE DESMADRES PROFESIONALES
+          PROPIEDAD DE AGENCIA WWW.DESPEDIDASGALICIA.ES
         </div>
       </footer>
 
