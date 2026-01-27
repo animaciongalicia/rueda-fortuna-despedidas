@@ -31,7 +31,7 @@ const ResultView: React.FC<ResultViewProps> = ({ prize, diagnosis, onReset }) =>
 
   const handleContact = () => {
     const contactText = "Hola! He hecho vuestro test de la Rueda Despedider y necesito ayuda profesional para salvar esta despedida. Mi informe ha salido regular... ¿Me ayudáis?";
-    const whatsappUrl = `https://wa.me/346678288284?text=${encodeURIComponent(contactText)}`;
+    const whatsappUrl = `https://wa.me/34678288284?text=${encodeURIComponent(contactText)}`;
     window.open(whatsappUrl, '_blank');
   };
 
