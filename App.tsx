@@ -222,7 +222,7 @@ const App: React.FC = () => {
                 DESMADRES DESPEDIDAS S.L.
               </div>
               <h1 className="text-6xl md:text-[8rem] font-bungee leading-none tracking-tighter text-white drop-shadow-2xl">
-                RULEDA <br className="hidden md:block"/> <span className="text-yellow-400 italic">Despedida</span>
+                RULETA<br className="hidden md:block"/> <span className="text-yellow-400 italic">DESPEDIDAS</span>
               </h1>
               <p className="text-lg md:text-2xl text-slate-300 font-medium max-w-2xl mx-auto italic px-4">
                 ¿Acabaréis en el calabozo o con una resaca de caballo?  Gira para auditar vuestra despedida.
