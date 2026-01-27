@@ -22,8 +22,8 @@ const ResultView: React.FC<ResultViewProps> = ({ prize, diagnosis, onReset }) =>
   const handleDownload = (type: 'cagadas' | 'top') => {
     // Enlaces de ejemplo de Google Drive tal como se solicita
     const links = {
-      cagadas: "https://drive.google.com/file/d/ejemplo-10-cagadas-despedidas/view",
-      top: "https://drive.google.com/file/d/ejemplo-guia-top-organizacion/view"
+      cagadas: "https://drive.google.com/file/d/1bE_1rYT3FOZ87Q1xTQf8tgC7plM2kzbd/view?usp=share_link",
+      top: "https://drive.google.com/file/d/1mdN1yLzH2vitNZtNMX18YCoCfPN4phCa/view?usp=share_link"
     };
     
     window.open(links[type], '_blank');
