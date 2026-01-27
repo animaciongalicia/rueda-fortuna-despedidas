@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { GoogleGenAI, Type } from "@google/genai";
+import { Analytics } from "@vercel/analytics/react";
 import { AppStep, Lead, Prize, Diagnosis } from './types';
 import LeadForm from './components/LeadForm';
 import PartyDetailsForm from './components/PartyDetailsForm';
@@ -293,6 +294,8 @@ const App: React.FC = () => {
           PROPIEDAD DE AGENCIA WWW.DESPEDIDASGALICIA.ES
         </div>
       </footer>
+
+      <Analytics />
 
       <style>{`
         @keyframes fadeIn {
