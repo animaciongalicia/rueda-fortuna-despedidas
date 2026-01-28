@@ -31,6 +31,67 @@
   <meta name="twitter:title" content="Ruleta de Despedidas en Galicia" />
   <meta name="twitter:description" content="Ideas + packs + presupuesto rápido. Coruña, Vigo y Sanxenxo." />
 
+<style>
+  #seo-footer {
+    max-width: 980px;
+    margin: 140px auto 48px;
+    padding: 0 16px;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+  }
+
+  #seo-footer summary {
+    cursor: pointer;
+    font-weight: 700;
+    margin-bottom: 12px;
+    list-style: none;
+  }
+
+  #seo-footer summary::-webkit-details-marker { display: none; }
+
+  #seo-footer .seo-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 18px 20px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    font-size: 13px;
+    line-height: 1.55;
+    color: #222;
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  #seo-footer p { margin: 10px 0; }
+
+  #seo-footer h3 {
+    margin: 16px 0 8px;
+    font-size: 14px;
+    font-weight: 800;
+  }
+
+  #seo-footer .seo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #seo-footer .seo-list li { margin: 6px 0; }
+
+  #seo-footer a {
+    text-decoration: underline;
+    font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    #seo-footer { margin: 56px auto 36px; }
+    #seo-footer .seo-card { font-size: 14px; padding: 16px 16px; }
+  }
+</style>
+
+  
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -70,6 +131,41 @@
 </head>
 <body>
     <div id="root"></div>
+
+<footer id="seo-footer">
+  <details>
+    <summary>Información y recursos para despedidas en Galicia</summary>
+
+    <div class="seo-card">
+      <p>
+        La <strong>Ruleta de despedidas</strong> sirve para decidir rápido cuando el grupo se atasca:
+        plan, tipo de actividad y siguiente paso. Sin 200 mensajes y sin discusiones.
+      </p>
+
+      <p>
+        Si estáis organizando <strong>despedidas de soltero</strong> o <strong>despedidas de soltera</strong> en Galicia
+        (Coruña, Vigo o Sanxenxo), aquí tenéis herramientas y packs para montarlo con cabeza.
+      </p>
+
+      <h3>Otras herramientas gratuitas</h3>
+      <ul class="seo-list">
+        <li><a href="https://test-despedidas.com/" target="_blank" rel="noopener noreferrer">Test de despedidas (plan en 3 minutos)</a></li>
+        <li><a href="https://retranca.es/" target="_blank" rel="noopener noreferrer">Retranca (juego para grupos)</a></li>
+        <li><a href="https://gastosdespedidas.com/" target="_blank" rel="noopener noreferrer">Calculadora de gastos (reparto sin líos)</a></li>
+      </ul>
+
+      <h3>Packs y organización</h3>
+      <ul class="seo-list">
+        <li><a href="https://despedidasgalicia.es/" target="_blank" rel="noopener noreferrer">Despedidas en Galicia</a></li>
+        <li><a href="https://despedidascoruna.es/" target="_blank" rel="noopener noreferrer">Despedidas en Coruña</a></li>
+        <li><a href="https://despedidasvigo.com/" target="_blank" rel="noopener noreferrer">Despedidas en Vigo</a></li>
+        <li><a href="https://despedidas-sanxenxo.com/" target="_blank" rel="noopener noreferrer">Despedidas en Sanxenxo</a></li>
+        <li><a href="https://www.los7pc.com/" target="_blank" rel="noopener noreferrer">Local para despedidas en Coruña (cenas + show)</a></li>
+      </ul>
+    </div>
+  </details>
+</footer>
+  
     <!-- Añadimos el script de entrada para que Vite lo procese -->
     <script type="module" src="/index.tsx"></script>
 </body>
